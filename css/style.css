@@ -1,0 +1,141 @@
+
+.body {
+
+  height:auto
+}
+.fondo1{
+    background-color: rgb(192, 240, 162);
+    background-repeat: no-repeat;
+    background-size: cover;
+height: 100px;
+}
+
+
+.colorfondo{
+  background-color: #c04650  ;
+}
+
+.colorfondo2{
+  background-color: #faeded  ;
+}
+.navbar{
+  background-color: rgba(24, 94, 185, 0.808);
+font-family: 'Teko', sans-serif;
+font-size: 20px;
+}
+
+.nav-link{
+  width: 200px;
+}
+
+.gris{
+    background: rgba(255, 250, 250, 0.116);
+}
+.top-nav-collapse{
+    background: rgba(24, 94, 185, 0.808) !important;
+
+}
+
+.color{
+    color:white;
+}
+.color-t{
+color: black;
+}
+.col-40, .col-60 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: top;
+}
+.col-40 {
+    font-family: 'Bebas Neue', cursive;
+  padding: 30px;
+  color: white;
+}
+.col-10 {
+  margin-left: 100px;
+ 
+}
+
+.formulario input[type="text"],
+.formulario textarea {
+border: 1px solid rgb(153, 153, 153);
+font-weight: 400px; 
+margin-bottom: 15px;
+outline: 0;
+padding: 12px 20px; 
+width: 100%;
+}
+.formulario textarea{
+  max-width: 100%;
+  max-height: 200px;
+  min-width: 100%;
+  min-height: 150px;
+ 
+}
+.formulario input[type="text"]:focus,
+.formulario textarea:focus {
+  background:#f5e1e9;
+  border: transparent 3px solid #dfdada;
+  cursor: pointer;
+  float: right;
+  padding: 12px 30px;
+ 
+  
+  }
+.formulario button{
+   background: #f3adc9;
+  border: transparent;
+  cursor: pointer;
+  float: right;
+}
+
+
+h1,h2{
+  font-family: 'Bebas Neue', cursive;
+
+}
+h3{
+  font-family: 'Bebas Neue', cursive;
+color: black;
+}
+h4{
+   font-family: 'Bebas Neue', cursive;
+  color: white;
+}
+h5{
+  color: white;
+   font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+.letra{
+  font-size: 10px;
+}
+.img{
+  float: left;
+  width: 165px;
+  height: 165px;
+  padding-left: 3px;
+padding-top: 3px;
+padding-bottom: 0px;
+}
+
+.txt{
+  color: black;
+}
+.img-cv{
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+margin-right: 70px;
+margin-left: 30px;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+

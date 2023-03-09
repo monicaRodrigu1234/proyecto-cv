@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Formulario Contacto</title>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  
+  <script>
+   
+  function validateForm() {
+   var x =  document.getElementById('Nombre').value;
+   if (x == "") {
+         document.getElementById('status').innerHTML = "No ha ingresado el nombre, ingrese el nombre";
+         return false;
+     }
+     x =  document.getElementById('E-mail').value;
+   if (x == "") {
+         document.getElementById('status').innerHTML = "No ha ingresado el E-mail, ingrese el E-mail";
+         return false;
+     } else {
+         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         if(!re.test(x)){
+             document.getElementById('status').innerHTML = "El E-mail no es correcto, vuelva a ingresar el E-mail ";
+             return false;
+         }
+     }
+     x =  document.getElementById('Tema').value;
+     if (x == "") {
+         document.getElementById('status').innerHTML = "No ha ingresado el tema, ingrese el tema";
+         return false;
+     }
+     x =  document.getElementById('Mensaje').value;
+     if (x == "") {
+         document.getElementById('status').innerHTML = "No ha ingresado el mensaje, ingrese el mensaje";
+         return false;
+     }
+    document.getElementById('status').innerHTML = "Enviando...";
+    document.getElementById('contact-form').submit();
+  }
+  </script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark  scrolling-navbar fixed-top top-nav-collapse">
+    <img src="img/logo.png" alt="logocv" class="img-cv">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" 
+     data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" 
+     aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="index.html">Información personal
+           <span class="sr-only">(current)</span>
+         </a>
+       </li>
+       
+       <li class="nav-item active ">
+         <a class="nav-link"  href="experiencias.html" > Experiencias
+             <span class="sr-only">(current)</span> 
+         </a>
+       </li>
+       <li class="nav-item  active">
+         <a class="nav-link" href="datos.html" > Contactame
+          </a> 
+       </li> 
+         <li class="nav-item active">
+           <a class="nav-link" href="contacto.html">Mensajes
+             <span class="sr-only">(current)</span>
+           </a>
+         </li> 
+     </ul>
+   </div>
+ </nav>
+ <!--/.Navbar -->
+</header>
+        <section class="colorfondo2 p-5">
+            <h3 class=" h2 mt-4 pt-4 text-justify">Formulario de contacto</h3>
+            <div class=" txt">
+                <div class="col-md-8 col-xl-9">
+                    <form id ="contact-form" name="contact-form" action="enviado.html" method="POST"  onsubmit="return validateForm()" >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <div class="md-form">
+                                        <input type="text" id="Nombre" name="Nombre" class="form-control">
+                                        <label for="Nombre" class="">Tu nombre</label>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <div class="md-form">
+                                        <input type="text" id="E-mail" name="E-mail" class="form-control">
+                                        <label for="E-mail" class="">Tu E-mail</label>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <input type="text" id="Tema" name="Tema" class="form-control">
+                                    <label for="Tema" class="">Tema</label>
+                                </div>
+                            </div>
+                        </div>
+                  
+                                         <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="Mensaje" name="Mensaje" class="md-textarea"></textarea>
+                                    <label for="Mensaje">Tu mensaje</label>
+                                </div>
+
+                            </div>
+                        </div>
+        
+                    </form>
+
+                    <div class="center-on-small-only">
+                        <a class="btn btn-grey" onclick="validateForm()">Enviar</a>
+                    </div> 
+                    <div class="status" id="status"></div>
+               
+                </div>
+  
+                
+            </div>
+        </section>
+        <!--Section: Contact v.2-->
+
+        <footer class="page-footer stylish-color-dark    pt-4 text-center">
+          <div class="container-fluid">
+            
+                <h6 class="text-uppercase  font-weight-bold">Proyecto Final </h6>
+                          <img src="img/logo_azul_ticmas.svg" class="rounded-circle img-fluid" height="100" width="100" 
+               
+                      alt="ticmas">
+                <p>¡Gracias por visitar mi página! </p>
+              </div>
+              
+            </div>
+          </div>
+          
+      </footer>
+      
+      </body>
+      </html>
+      
+      
+      
+      

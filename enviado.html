@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Formulario enviado</title>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  <script>
+  
+
+function validateForm() {
+   var x =  document.getElementById('name').value;
+   if (x == "") {
+         document.getElementById('status').innerHTML = "Name cannot be empty";
+         return false;
+     }
+     x =  document.getElementById('email').value;
+   if (x == "") {
+         document.getElementById('status').innerHTML = "Email cannot be empty";
+         return false;
+     } else {
+         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         if(!re.test(x)){
+             document.getElementById('status').innerHTML = "Email format invalid";
+             return false;
+         }
+     }
+     x =  document.getElementById('subject').value;
+     if (x == "") {
+         document.getElementById('status').innerHTML = "Subject cannot be empty";
+         return false;
+     }
+     x =  document.getElementById('message').value;
+     if (x == "") {
+         document.getElementById('status').innerHTML = "Message cannot be empty";
+         return false;
+     }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+  }
+  </script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark gris scrolling-navbar fixed-top top-nav-collapse">
+    <img src="img/logo.png" alt="logocv" class="img-cv">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" 
+     data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" 
+     aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="index.html">Información personal
+           <span class="sr-only">(current)</span>
+         </a>
+       </li>
+       
+       <li class="nav-item active ">
+         <a class="nav-link"  href="experiencias.html" > Experiencias
+             <span class="sr-only">(current)</span> 
+         </a>
+       </li>
+       <li class="nav-item  active">
+         <a class="nav-link" href="datos.html" > Contactame
+          </a> 
+       </li> 
+         <li class="nav-item active">
+           <a class="nav-link" href="contacto.html">Mensajes
+             <span class="sr-only">(current)</span>
+           </a>
+         </li> 
+     </ul>
+   </div>
+ </nav>
+ <!--/.Navbar -->s
+</header>
+
+<section class="card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col m-3 alineacion2">
+        <h2 class="text-center p-5"> ¡Gracias por escribrirme!</h2>
+        <p class="text-center"> Tu mensaje sera leido y te contestaremos a la brevedad <p>
+</div>
+</div>
+</div>
+<a href="contacto.html" class="m-3 p-3"> Volver</a> 
+</section>
+
+  
+<footer class="page-footer stylish-color-dark    pt-4 text-center">
+  <div class="container-fluid">
+    
+        <h6 class="text-uppercase  font-weight-bold">Proyecto Final </h6>
+                  <img src="img/logo_azul_ticmas.svg" class="rounded-circle img-fluid" height="100" width="100" 
+       
+              alt="ticmas">
+        <p>¡Gracias por visitar mi página! </p>
+      </div>
+      
+    </div>
+  </div>
+  
+</footer>
+</body>
+</html>
